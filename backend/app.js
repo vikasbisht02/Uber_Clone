@@ -7,6 +7,7 @@ const cors = require("cors")
 const cookieParser = require("cookie-parser");
 
 const userRoute = require("./routes/user.routes.js")
+const captainRoutes = require("./routes/captain.routes.js")
 
 
 app.use(cors());
@@ -21,5 +22,6 @@ app.get("/", (req, res) => {
 })
 
 app.use("/users", userRoute);
+app.use("/captains", captainRoutes);
 
 module.exports = app;
